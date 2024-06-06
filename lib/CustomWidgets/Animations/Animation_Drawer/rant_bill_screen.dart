@@ -9,7 +9,7 @@ class RantScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Color(0xFFFFFFFF),
       body: Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding: EdgeInsets.all(appSize.height*0.016),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
