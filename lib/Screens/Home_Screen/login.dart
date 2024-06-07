@@ -23,13 +23,14 @@ class _login_secreenState extends State<login_secreen> {
     // TODO: implement initState
     super.initState();
     print("login");
-
   }
 
 
   @override
   Widget build(BuildContext context) {
-    var appSize = MediaQuery.of(context).size;
+    var appSize = MediaQuery
+        .of(context)
+        .size;
     return Scaffold(
       body: Padding(
         padding: const EdgeInsets.all(13.0),
@@ -54,10 +55,12 @@ class _login_secreenState extends State<login_secreen> {
                   controller: emailController,
                   regexPattern: r'^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$',
                   validator: (value) {
-                    if ( value.isEmpty) {
+                    if (value.isEmpty) {
                       return "Enter Email";
                     }
-                    else if (!RegExp(r'^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$').hasMatch(value)) {
+                    else
+                    if (!RegExp(r'^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$').hasMatch(
+                        value)) {
                       return "Enter valid Email";
                     }
                     return null;
@@ -75,10 +78,12 @@ class _login_secreenState extends State<login_secreen> {
                   controller: passwordController,
                   regexPattern: r'^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d@$!%*?&]{8,}$',
                   validator: (value) {
-                    if (value.isEmpty ) {
+                    if (value.isEmpty) {
                       return "Enter Password";
                     }
-                    else if (!RegExp(r'^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d@$!%*?&]{6,}$').hasMatch(value)) {
+                    else if (!RegExp(
+                        r'^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d@$!%*?&]{6,}$')
+                        .hasMatch(value)) {
                       return "Password must be at least 6 characters  ";
                     }
                     return null;
@@ -99,7 +104,7 @@ class _login_secreenState extends State<login_secreen> {
                     if (value.isEmpty) {
                       return "Enter Contact Number";
                     }
-                    else if (!RegExp( r'^\+?[1-9]\d{1,14}$').hasMatch(value)) {
+                    else if (!RegExp(r'^\+?[1-9]\d{1,14}$').hasMatch(value)) {
                       return "Enter valid Contact Number";
                     }
                     return null;
@@ -167,4 +172,3 @@ class _login_secreenState extends State<login_secreen> {
     );
   }
 }
-
