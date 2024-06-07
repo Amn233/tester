@@ -6,6 +6,8 @@ class text extends StatelessWidget {
   final FontWeight fontWeight;
 
 
+
+
   const text({super.key, required this.title, required this.textColor, required this.fontSize, required this.fontWeight });
 
   @override
@@ -16,6 +18,7 @@ class text extends StatelessWidget {
         color: textColor,
         fontSize: fontSize,
         fontWeight: fontWeight,
+
       ),
     );
   }
