@@ -4,7 +4,7 @@ import 'package:newsapp/CustomWidgets/Animations/Animation_Drawer/animated_drawe
 import 'package:newsapp/Screens/Home_Screen/home_screen.dart';
 import 'package:newsapp/Screens/Home_Screen/login_screen.dart';
 import 'package:newsapp/Screens/ProfileScreens/profile_screen.dart';
-import 'package:newsapp/Screens/Splash_Screen/splash_screen.dart';
+import 'package:newsapp/Screens/Onboarding/Splash/splash_screen.dart';
 
 
 import 'CustomWidgets/Animations/Animation_Drawer/electric_bill_screen.dart';
