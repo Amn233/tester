@@ -17,7 +17,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    Timer(Duration(seconds: 0), () {
+    Timer(Duration(seconds: 1), () {
       context.pushReplacement("/login");
     });
   }

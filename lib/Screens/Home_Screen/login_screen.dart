@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../CustomWidgets/Texts/text.dart';
 
@@ -86,10 +87,13 @@ class _LoginScreenState extends State<LoginScreen> {
                           ),
                           SizedBox(height: appSize.height * 0.03),
                           TextFormField(
+                             keyboardType: TextInputType.emailAddress,
                             controller: emailController,
                             decoration: InputDecoration(
                               hintText: 'johndoe@gmail.com',
                               enabledBorder: OutlineInputBorder(
+                                  borderSide: BorderSide(color: Colors.white)),
+                              focusedBorder: OutlineInputBorder(
                                   borderSide: BorderSide(color: Colors.white)),
                               prefixIcon: Icon(Icons.email_outlined),
                             ),
@@ -101,6 +105,8 @@ class _LoginScreenState extends State<LoginScreen> {
                             decoration: InputDecoration(
                               hintText: '********',
                               enabledBorder: OutlineInputBorder(
+                                  borderSide: BorderSide(color: Colors.white)),
+                              focusedBorder: OutlineInputBorder(
                                   borderSide: BorderSide(color: Colors.white)),
                               prefixIcon: Icon(Icons.lock_outline),
                               suffixIcon: Icon(Icons.remove_red_eye),
@@ -134,7 +140,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           GestureDetector(
                             onTap: () {
                               if (_formKey.currentState!.validate()) {
-                                // Perform login action
+                                context.pushReplacement("/dashboard");
                               }
                             },
                             child: Container(
