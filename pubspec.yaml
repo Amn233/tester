@@ -64,7 +64,11 @@ flutter:
     - assets/splash.png
     - assets/google.png
     - assets/apple-logo.png
-    - assets/facebook.png
+    - assets/logo 1.png
+    - assets/Group1.png
+    - assets/Group2.png
+    - assets/Group3.png
+    - assets/Group4.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

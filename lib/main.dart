@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:newsapp/CustomWidgets/Animations/Animation_Drawer/animated_drawer.dart';
 import 'package:newsapp/Screens/Home_Screen/home_screen.dart';
+import 'package:newsapp/Screens/Home_Screen/login_screen.dart';
 import 'package:newsapp/Screens/ProfileScreens/profile_screen.dart';
+import 'package:newsapp/Screens/Onboarding/Splash/splash_screen.dart';
 
 
 import 'CustomWidgets/Animations/Animation_Drawer/electric_bill_screen.dart';
@@ -14,15 +16,15 @@ void main() {
   runApp(const MyApp());
 }
 final GoRouter _router = GoRouter(
-  initialLocation: '/home',
+  initialLocation: '/splash',
   routes: [
     GoRoute(
-      path: "/home",
-      builder: (context, state) => HomeScreen(),
+      path: "/splash",
+      builder: (context, state) => SplashScreen(),
     ),
     GoRoute(
-      path: "/detail",
-      builder: (context, state) => DetailProduct(),
+      path: "/login",
+      builder: (context, state) => LoginScreen(),
     ),
     GoRoute(
       path: "/profile",
