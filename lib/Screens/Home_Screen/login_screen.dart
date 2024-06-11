@@ -128,7 +128,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                     });
                                   },
                                 ),
-                                text(
+                                text(                                                                    
                                   title: "Remember password",
                                   textColor: Color(0xFF939393),
                                   fontSize: appSize.height * 0.017,

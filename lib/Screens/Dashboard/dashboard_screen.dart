@@ -84,27 +84,32 @@ class _dashBoard_screenState extends State<dashBoard_screen> {
                 SizedBox(
                   width: appSize.width * 0.03,
                 ),
-                Stack(children: [
-                  Image.asset(
-                    "assets/Rectangle.png",
-                  ),
-                  Positioned(
-                    top: appSize.height * 0.03,
-                    left: appSize.width * 0.1,
-                    child: Image.asset(
-                      "assets/Group8.png",
-                      fit: BoxFit.fitWidth,
+                InkWell(
+                  onTap: (){
+                    context.push("/map");
+                  },
+                  child: Stack(children: [
+                    Image.asset(
+                      "assets/Rectangle.png",
                     ),
-                  ),
-                  Positioned(
-                      top: appSize.height*0.11,
-                      left: appSize.width * 0.04,
-                      child: text(
-                          title: "My Attendance",
-                          textColor: Color(0xFF0175B8),
-                          fontSize: appSize.height*0.019,
-                          fontWeight: FontWeight.bold))
-                ]),
+                    Positioned(
+                      top: appSize.height * 0.03,
+                      left: appSize.width * 0.1,
+                      child: Image.asset(
+                        "assets/Group8.png",
+                        fit: BoxFit.fitWidth,
+                      ),
+                    ),
+                    Positioned(
+                        top: appSize.height*0.11,
+                        left: appSize.width * 0.04,
+                        child: text(
+                            title: "My Attendance",
+                            textColor: Color(0xFF0175B8),
+                            fontSize: appSize.height*0.019,
+                            fontWeight: FontWeight.bold))
+                  ]),
+                ),
               ],
             ),
           ),

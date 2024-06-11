@@ -5,6 +5,7 @@ import 'package:newsapp/Screens/Dashboard/Dashboard_service/live_attendance_scre
 import 'package:newsapp/Screens/Dashboard/dashboard_screen.dart';
 import 'package:newsapp/Screens/Home_Screen/home_screen.dart';
 import 'package:newsapp/Screens/Home_Screen/login_screen.dart';
+import 'package:newsapp/Screens/MapSample/map_sample.dart';
 import 'package:newsapp/Screens/ProfileScreens/profile_screen.dart';
 import 'package:newsapp/Screens/Onboarding/Splash/splash_screen.dart';
 
@@ -42,8 +43,8 @@ final GoRouter _router = GoRouter(
       builder: (context, state) =>LeaveApplication(),
     ),
     GoRoute(
-      path: "/gass",
-      builder: (context, state) =>GassScreen(),
+      path: "/map",
+      builder: (context, state) =>MapSample(),
     ),
     GoRoute(
       path: "/electric",
