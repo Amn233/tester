@@ -43,7 +43,7 @@ class MapSampleState extends State<MapSample> {
           myLocationEnabled: true,
           initialCameraPosition: CameraPosition(
             target: _center,
-            zoom: 11.0,
+            zoom: 16.0,
           ),
         ),
         Positioned(
