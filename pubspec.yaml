@@ -36,6 +36,7 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.6
   go_router: ^14.1.4
+  google_maps_flutter: 2.6.1
 
 dev_dependencies:
   flutter_test:
@@ -99,6 +100,8 @@ flutter:
     - assets/Rectangle 122.png
     - assets/Rectangle 122 (1).png
     - assets/request.png
+    - assets/Vector.png
+    - assets/done.png
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 
