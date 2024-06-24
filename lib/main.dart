@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:newsapp/Screens/Dashboard/Dashboard_service/live_attendance_screen.dart';
 import 'package:newsapp/Screens/Dashboard/dashboard_screen.dart';
+import 'package:newsapp/Screens/Dashboard/DashboardComponent/mapSample.dart';
+import 'package:newsapp/Screens/Splash/splashScreen.dart';
+import 'Screens/Dashboard/DashboardComponent/leaveAappliction.dart';
+import 'Screens/Dashboard/DashboardComponent/liveAattendance.dart';
+import 'Screens/LoginScreen/loginScreen.dart';
+import 'Screens/SigninScreen/signinScreen.dart';
 
-
-import 'package:newsapp/Screens/MapSample/map_sample.dart';
-
-import 'package:newsapp/Screens/Onboarding/Splash/splash_screen.dart';
-import 'Screens/Dashboard/Dashboard_service/leave_appliction.dart';
-import 'Screens/Home_Screen/login_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -23,6 +22,10 @@ final GoRouter _router = GoRouter(
     GoRoute(
       path: "/login",
       builder: (context, state) => LoginScreen(),
+    ),
+    GoRoute(
+      path: "/signIn",
+      builder: (context, state) => SignInScreen(),
     ),
     GoRoute(
       path: "/dashboard",

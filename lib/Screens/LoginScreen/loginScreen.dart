@@ -1,6 +1,8 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-
+import 'package:http/http.dart';
 import '../../CustomWidgets/Texts/text.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -33,6 +35,26 @@ class _LoginScreenState extends State<LoginScreen> {
       return 'Password must be at least 6 characters long';
     }
     return null;
+  }
+  void LogIn(String email,password)async{
+    try{
+      Response response = await post(
+          Uri.parse("https://reqres.in/api/login"),
+          body: {
+            "email" :email,
+            "password" : password}
+      );
+      if(response.statusCode==200){
+        var data=jsonDecode(response.body.toString());
+        print(data);
+        print("Login");
+        context.pushReplacement("/dashboard");
+      }else{
+        print("failed");
+      }
+    }catch(e){
+      print(e.toString());
+    }
   }
 
   @override
@@ -140,7 +162,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           GestureDetector(
                             onTap: () {
                               if (_formKey.currentState!.validate()) {
-                                context.pushReplacement("/dashboard");
+                                LogIn(emailController.text.toString(),passwordController.text.toString());
                               }
                             },
                             child: Container(
@@ -157,20 +179,33 @@ class _LoginScreenState extends State<LoginScreen> {
                               ),
                             ),
                           ),
+                          SizedBox(height: appSize.height * 0.02),
+                          text(
+                            title: "OR",
+                            textColor: Colors.black,
+                            fontSize: appSize.height * 0.017,
+                            fontWeight: FontWeight.normal,
+                          ),
                           Padding(
                             padding: EdgeInsets.all(appSize.height * 0.01),
                             child: Row(
-                              mainAxisAlignment: MainAxisAlignment.end,
+                              mainAxisAlignment: MainAxisAlignment.center,
                               children: [
-                                text(
-                                  title: "Forget password?",
-                                  textColor: Color(0xFF0175B8),
-                                  fontSize: appSize.height * 0.017,
-                                  fontWeight: FontWeight.bold,
+                                InkWell(
+                                  onTap: (){
+                                    context.pushReplacement("/signIn");
+                                  },
+                                  child: text(
+                                    title: "SignIn",
+                                    textColor: Color(0xFF0175B8),
+                                    fontSize: appSize.height * 0.020,
+                                    fontWeight: FontWeight.bold,
+                                  ),
                                 ),
                               ],
                             ),
                           ),
+
                           text(
                             title: "By signing in you are agreeing to our",
                             textColor: Color(0xFF939393),
