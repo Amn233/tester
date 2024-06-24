@@ -3,7 +3,7 @@ import 'package:go_router/go_router.dart';
 import 'package:newsapp/Screens/Dashboard/dashboardScreen.dart';
 import 'package:newsapp/Screens/Dashboard/DashboardComponent/mapSample.dart';
 import 'package:newsapp/Screens/Splash/splashScreen.dart';
-import 'Screens/Dashboard/DashboardComponent/leaveAappliction.dart';
+import 'Screens/Dashboard/DashboardComponent/leaveAppliction.dart';
 import 'Screens/Dashboard/DashboardComponent/liveAattendance.dart';
 import 'Screens/LoginScreen/loginScreen.dart';
 import 'Screens/SigninScreen/signinScreen.dart';
