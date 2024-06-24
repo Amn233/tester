@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:newsapp/Screens/Dashboard/dashboard_screen.dart';
+import 'package:newsapp/Screens/Dashboard/dashboardScreen.dart';
 import 'package:newsapp/Screens/Dashboard/DashboardComponent/mapSample.dart';
 import 'package:newsapp/Screens/Splash/splashScreen.dart';
 import 'Screens/Dashboard/DashboardComponent/leaveAappliction.dart';
